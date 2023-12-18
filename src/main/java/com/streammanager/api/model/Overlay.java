@@ -1,18 +1,20 @@
 package com.streammanager.api.model;
 
 import lombok.Data;
+import lombok.NonNull;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 @Data
+@Document(collection = "overlays")
 public class Overlay implements Serializable {
     
     @Id
     private String id;
     
-    @NotNull
+    @NonNull
     private String name;
     
     private String techname;

@@ -1,0 +1,4 @@
+spring.data.mongodb.uri=
+spring.data.mongodb.database=streammanager
+server.port=8081
+jwt.secret=

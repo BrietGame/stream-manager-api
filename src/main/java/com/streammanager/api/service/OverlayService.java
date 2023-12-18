@@ -27,9 +27,7 @@ public class OverlayService {
         return overlayRepository.save(overlay);
     }
     
-    public Overlay delete(String id) {
-        Overlay overlay = overlayRepository.findById(id).orElse(null);
+    public void delete(String id) {
         overlayRepository.deleteById(id);
-        return overlay;
     }
 }

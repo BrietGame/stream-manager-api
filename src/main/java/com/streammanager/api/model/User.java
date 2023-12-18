@@ -1,13 +1,15 @@
 package com.streammanager.api.model;
 
 import lombok.Data;
+import lombok.NonNull;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
-
-import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Data
+@Document(collection = "users")
 public class User implements Serializable {
     
     @Id
@@ -17,11 +19,15 @@ public class User implements Serializable {
     
     private String lastName;
     
-    @NotNull
     private String email;
 
-    @NotNull
+    private String username;
+
     private String password;
     
     private String avatar;
+    
+    private List<Role> roles;
+    
+    private String refreshToken;
 }
