@@ -2,9 +2,11 @@ package com.streammanager.api.service;
 
 import com.streammanager.api.model.User;
 import com.streammanager.api.respository.UserRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UserService {
     
     UserRepository userRepository;

@@ -2,9 +2,11 @@ package com.streammanager.api.service;
 
 import com.streammanager.api.model.Overlay;
 import com.streammanager.api.respository.OverlayRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class OverlayService {
     
     OverlayRepository overlayRepository;
